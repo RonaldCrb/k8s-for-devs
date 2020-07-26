@@ -17,7 +17,7 @@ class HomeRoutes {
   // home endpoint
   public async home(req: Request, res: Response): Promise<void> {
     res.status(200).json({
-      status: 'Hello Babelforce telepresence demo',
+      status: 'Hello telepresence demo',
       timestamp: moment().format('dddd - MMMM Do YYYY, h:mm:ss a'),
     });
   }

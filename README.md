@@ -2,7 +2,7 @@
 
 ## ABSTRACT
 
-As of today, Kubernetes is the top technology for container orchestration in the world and the one that Babelforce has chosen to base our services on. This decision comes with a set of challenges that we want to overcome in order to make our workflows efficient and the delivery of our products in a consistent, fast and reproducible manner.
+As of today, Kubernetes is the top technology for container orchestration in the world and the one that we have chosen to base our services on. This decision comes with a set of challenges that we want to overcome in order to make our workflows efficient and the delivery of our products in a consistent, fast and reproducible manner.
 
 ## OBJECTIVES
 
@@ -52,7 +52,7 @@ we are going to be using the `kubectl` command quite a lot... in order to save s
 
 Minikube is a minimalistic Kubernetes distribution created with the purpose of setting up a single node cluster to learn and practice kubernetes.
 
-All distributions of Kubernetes rely on a container runtime like Docker, CRI-O or RKT. This tutorial uses Docker as this is the most popular runtime in todays market and also the one we use at Babelforce.
+All distributions of Kubernetes rely on a container runtime like Docker, CRI-O or RKT. This tutorial uses Docker as this is the most popular runtime in todays market and also the one we use.
 
 to install Minikube you can follow the official instructions provided in the [Minikube official website](https://minikube.sigs.k8s.io/docs/start/)
 
