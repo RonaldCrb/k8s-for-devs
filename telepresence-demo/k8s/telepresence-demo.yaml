@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: telepresence-demo
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telepresence-demo-deployment
+  namespace: telepresence-demo
+
+spec:
+  replicas: 1
+  
+  selector:
+    matchLabels:
+      app: telepresence-demo
+
+  template:
+    metadata:
+      labels:
+        app: telepresence-demo
+
+    spec:
+      containers:
+        - name: telepresence-demo
+          image: "ronaldcrb/telepresence-demo:dev"
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "0.05"
+            limits:
+              memory: "128Mi"
+              cpu: "0.1"
+          ports:
+            - containerPort: 3030
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: telepresence-demo-service
+  namespace: telepresence-demo
+spec:
+  
+  type: ClusterIP
+  
+  selector:
+    app: telepresence-demo
+  
+  ports:
+    - name: http
+      protocol: TCP
+      port: 3030
+      targetPort: 3030

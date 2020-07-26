@@ -1,0 +1,96 @@
+#c59510 Amarillo, 
+#537130 Verde, 
+#a92821 Rojo, 
+#090b0a Negro, 
+#bfbdb0 Blanco
+
+# Styles...
+darkgreen: &darkgreen "#2F6205"
+green: &green "#60B43B"
+orange: &orange "#FEC909"
+red: &red "#EC1D25"
+yellow: &yellow "#FEE101"
+black: &black "#090b0a"
+white: &white "#bfbdb0"
+
+# Skin...
+k9s:
+  # General K9s styles
+  body:
+    fgColor: *orange
+    bgColor: *black
+    logoColor: *red
+  # ClusterInfoView styles.
+  info:
+    fgColor: *darkgreen
+    sectionColor: *green
+  frame:
+    # Borders styles.
+    border:
+      fgColor: *red
+      focusColor: *red
+    menu:
+      fgColor: *yellow
+      keyColor: *orange
+      # Used for favorite namespaces
+      numKeyColor: *yellow
+    # CrumbView attributes for history navigation.
+    crumbs:
+      fgColor: *black
+      bgColor: *orange
+      activeColor: *red
+    # Resource status and update styles
+    status:
+      newColor: *darkgreen
+      modifyColor: *orange
+      addColor: *orange
+      errorColor: *red
+      highlightcolor: *orange
+      killColor: *red
+      completedColor: *white
+    # Border title styles.
+    title:
+      fgColor: *black
+      bgColor: *red
+      highlightColor: *orange
+      counterColor: *yellow
+      filterColor: *yellow
+  views:
+    # Charts skins...
+    charts:
+      bgColor: *black
+      defaultDialColors:
+        - *green
+        - *red
+      defaultChartColors:
+        - *green
+        - *red
+    # TableView attributes.
+    table:
+      fgColor: *black
+      bgColor: *black
+      cursorColor: *red
+      # Header row styles.
+      header:
+        fgColor: *black
+        bgColor: *orange
+        sorterColor: *green
+    # Xray view attributes.
+    xray:
+      fgColor: *white
+      bgColor: *black
+      cursorColor: *orange
+      graphicColor: *red
+      showIcons: true
+    # YAML info styles.
+    yaml:
+      keyColor: *yellow
+      colonColor: *orange
+      valueColor: *green
+    # Logs styles.
+    logs:
+      fgColor: *white
+      bgColor: *black
+      indicator:
+        fgColor: *black
+        bgColor: *green
